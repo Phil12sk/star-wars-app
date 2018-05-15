@@ -1,0 +1,23 @@
+<section class="intro">
+  A long time ago, in a galaxy far,<br> far away....
+</section>
+<section class="logo">
+  <img src="assets/logo.JPG"/>
+</section>
+<div id="board" style="background-color: black">  
+  <div id="content">
+    <p class="title">Episode {{films?.episode_id}}</p>
+    <p class="subtitle">{{films?.title}}</p>
+    <br>
+    <p class="opening_crawl">{{films?.opening_crawl}}</p>
+    <br/><br/>
+  </div>  
+</div>
+<section id="endAnimation">
+  <a [routerLink]="['/home']">
+    <img src="assets/yoda.png" class="resize"/>
+  </a>
+</section>
+<audio preload="auto" autoplay>
+  <source src="assets/Star_Wars_original_opening_crawl.mp3" type="audio/mpeg">
+</audio>

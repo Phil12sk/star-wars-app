@@ -1,0 +1,70 @@
+<div class="container-fluid padding-top-0">
+  <div class="row padding-top-0 padding-bottom-2">
+    <div class="col-lg-6">
+      <img src="assets/darth_vader.jpg" class="float-left" alt="">
+    </div>
+    <div class="col-lg-6">
+      <img src="assets/bb8.jpg" class="float-right" alt=""/>
+    </div>
+  </div>
+  <div class="row padding-top-2 padding-bottom-2">
+    <div class="col-lg-1 hidden-sm hidden-md"></div>
+    <div class="col-lg-2 col-md-6 text-left">
+      <button class="btn bg-warning" type="button" data-toggle="collapse" data-target="#people">Top 10 Characters</button>
+      <div id="people" class="collapse padding-top-1">
+        <ul *ngFor="let people of peoples">
+          <li class="text-white">{{people?.name}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-6 text-left">
+      <button class="btn bg-warning" type="button" data-toggle="collapse" data-target="#planet">Top 10 Planets</button>
+      <div id="planet" class="collapse padding-top-1">
+        <ul *ngFor="let planet of planets">
+          <li class="text-white">{{planet?.name}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-6 text-left">
+      <button class="btn bg-warning" type="button" data-toggle="collapse" data-target="#specie">Top 10 Species</button>
+      <div id="specie" class="collapse padding-top-1">
+        <ul *ngFor="let specie of species">
+          <li class="text-white">{{specie?.name}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-6 text-left">
+      <button class="btn bg-warning" type="button" data-toggle="collapse" data-target="#starship">Top 10 Starship</button>
+      <div id="starship" class="collapse padding-top-1">
+        <ul *ngFor="let starship of starships">
+          <li class="text-white">{{starship?.name}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-6 text-left">
+      <button class="btn bg-warning" type="button" data-toggle="collapse" data-target="#vehicle">Top 10 Starship</button>
+      <div id="vehicle" class="collapse padding-top-1">
+        <ul *ngFor="let vehicle of vehicles">
+          <li class="text-white">{{vehicle?.name}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-1 hidden-sm hidden-md"></div>
+  </div>
+  <div class="row">
+    <div class="col-lg-1 hidden-sm hidden-md"></div>
+    <div class="col-lg-10 col-md-12">
+      <div class="row">
+        <div class="col-lg-4" *ngFor="let film of films">
+          <div class="card" style="width: 90%; border: none">
+            <div class="card-body" style="background-color: black;">
+              <h5 class="card-title text-white">{{film?.title}}</h5>
+              <a (click)="openModalInfos($event)" id="{{film?.episode_id}}" class="btn bg-warning">Check infos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-1 hidden-sm hidden-md"></div>
+  </div>
+</div>
